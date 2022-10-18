@@ -15,7 +15,6 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.13.5
-  latlong2: ^0.8.0
   meta: ^1.8.0
   polylabel: ^1.0.1
   positioned_tap_detector_2: ^1.0.4

@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/src/core/bounds.dart';
 import 'package:flutter_map/src/map/flutter_map_state.dart';
-import 'package:latlong2/latlong.dart';
 
 class Anchor {
   final double left;

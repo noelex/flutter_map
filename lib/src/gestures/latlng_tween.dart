@@ -1,5 +1,5 @@
 import 'package:flutter/animation.dart';
-import 'package:latlong2/latlong.dart';
+import 'package:flutter_map/src/geo/latlng.dart';
 
 class LatLngTween extends Tween<LatLng> {
   LatLngTween({required LatLng begin, required LatLng end})

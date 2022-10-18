@@ -1,4 +1,4 @@
-import 'package:latlong2/latlong.dart';
+import 'package:flutter_map/src/geo/latlng.dart';
 
 /// Event sources which are used to identify different types of
 /// [MapEvent] events

@@ -13,7 +13,6 @@ import 'package:flutter_map/src/layer/tile_layer/tile_transformation.dart';
 import 'package:flutter_map/src/layer/tile_layer/tile_widget.dart';
 import 'package:flutter_map/src/layer/tile_layer/transformation_calculator.dart';
 import 'package:flutter_map/src/map/flutter_map_state.dart';
-import 'package:latlong2/latlong.dart';
 import 'package:tuple/tuple.dart';
 
 part 'tile_layer_options.dart';

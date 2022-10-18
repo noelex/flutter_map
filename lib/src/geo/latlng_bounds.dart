@@ -1,6 +1,6 @@
 import 'dart:math' as math;
+import 'package:flutter_map/src/geo/latlng.dart';
 
-import 'package:latlong2/latlong.dart';
 
 /// Data structure representing rectangular bounding box constrained by its
 /// northwest and southeast corners
@@ -101,33 +101,7 @@ class LatLngBounds {
   LatLng get southEast => LatLng(south, east);
 
   /// Obtain coordinates of the bounds center
-  LatLng get center {
-    /* https://stackoverflow.com/a/4656937
-       http://www.movable-type.co.uk/scripts/latlong.html
-
-       coord 1: southWest
-       coord 2: northEast
-
-       phi: lat
-       lambda: lng
-    */
-
-    final phi1 = southWest!.latitudeInRad;
-    final lambda1 = southWest!.longitudeInRad;
-    final phi2 = northEast!.latitudeInRad;
-
-    final dLambda = degToRadian(northEast!.longitude -
-        southWest!.longitude); // delta lambda = lambda2-lambda1
-
-    final bx = math.cos(phi2) * math.cos(dLambda);
-    final by = math.cos(phi2) * math.sin(dLambda);
-    final phi3 = math.atan2(math.sin(phi1) + math.sin(phi2),
-        math.sqrt((math.cos(phi1) + bx) * (math.cos(phi1) + bx) + by * by));
-    final lambda3 = lambda1 + math.atan2(by, math.cos(phi1) + bx);
-
-    // phi3 and lambda3 are actually in radians and LatLng wants degrees
-    return LatLng(radianToDeg(phi3), radianToDeg(lambda3));
-  }
+  LatLng get center => LatLng(north - south, east - west);
 
   /// Checks whether bound object is valid
   bool get isValid {

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:flutter_map_example/pages/zoombuttons_plugin_option.dart';
 import 'package:flutter_map_example/widgets/drawer.dart';
-import 'package:latlong2/latlong.dart';
 
 class WidgetsPage extends StatelessWidget {
   static const String route = 'widgets';
