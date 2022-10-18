@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter_map/src/geo/latlng.dart';
 
-
 /// Data structure representing rectangular bounding box constrained by its
 /// northwest and southeast corners
 class LatLngBounds {
@@ -101,7 +100,7 @@ class LatLngBounds {
   LatLng get southEast => LatLng(south, east);
 
   /// Obtain coordinates of the bounds center
-  LatLng get center => LatLng(north - south, east - west);
+  LatLng get center => LatLng((north - south) / 2, (east - west) / 2);
 
   /// Checks whether bound object is valid
   bool get isValid {
